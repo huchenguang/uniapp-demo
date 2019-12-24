@@ -2,13 +2,13 @@
   <view class="empty-wrap" v-if="type != 0">
     <view class="load-content" v-if="type === 1">
       <view class="load-error">
-        <image src="/static/image/dt_nodata.png"></image>
+        <image src="/static/img/dt_nodata.png"></image>
       </view>
       <view class="load-tips">{{ tips }}</view>
     </view>
     <view class="load-content" v-if="type === 2">
       <view class="load-error">
-        <image src="/static/image/dt_error.png"></image>
+        <image src="/static/img/dt_nodata.png"></image>
       </view>
       <view class="load-tips">{{ tips }} </view>
     </view>

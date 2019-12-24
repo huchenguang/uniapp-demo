@@ -4,10 +4,6 @@
 		"selectedColor": "#CA000F",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		"height": "50px",
-		"fontSize": "10px",
-		"iconWidth": "24px",
-		"spacing": "3px",
 		"list": [
 			{
 				"pagePath": "pages/home_index",
@@ -27,7 +23,8 @@
 		{
 			"path": "pages/home_index",
 			"style": {
-				"navigationBarTitleText": "首页"
+        "navigationBarTitleText": "首页",
+        "enablePullDownRefresh":true
 			}
 		},
 		{

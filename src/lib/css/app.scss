@@ -1,0 +1,89 @@
+//全局样式
+
+.dt-page {
+  position: relative;
+  font-size: $dt-font-size-base;
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+  background: $dt-bg-color-grey;
+  color: $dt-text-color;
+  min-height: 100vh; 
+}
+
+.dt-color-info {
+  color: $dt-color-info;
+}
+
+.dt-color-primary {
+  color: $dt-color-primary;
+}
+ 
+.dt-color-success {
+  color: $dt-color-success;
+}
+
+.dt-color-warning {
+  color: $dt-color-warning;
+}
+
+.dt-color-error {
+  color: $dt-color-error;
+}
+
+.dt-text-row-one {
+  display: block !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 1 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.dt-input-placeholder {
+  color: $dt-text-color-placeholder;
+}
+
+/* 默认镂空按钮样式 */
+.dt-btn-default {
+  background: transparent;
+  border: 1px solid #005bac;
+  color: #005bac;
+
+  &::after {
+    display: none;
+  }
+}
+
+/* 主题色按钮 */
+.dt-btn-submit {
+  width: 690upx;
+  height: 90upx;
+  line-height: 90upx;
+  font-size: $dt-font-size-lg;
+  background-color: $dt-color-primary;
+  color: #fff;
+  border-radius: $dt-border-radius-base;
+
+  &::after {
+    display: none;
+  }
+}
+
+.dt-btn-cancel {
+  width: 690upx;
+  height: 90upx;
+  line-height: 90upx;
+  font-size: $dt-font-size-lg;
+  background-color: $dt-color-info;
+  color: #fff;
+  border-radius: $dt-border-radius-base;
+
+  &::after {
+    display: none;
+  }
+}
+
+.input-placeholder,
+.textarea-placeholder {
+  color: $dt-text-color-placeholder;
+}

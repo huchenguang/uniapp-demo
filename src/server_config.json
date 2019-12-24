@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "apiUrl": "https://api.dreamstech.cn/ysyl_v2",
+  "appkey": "admindev",
+  "appSecret": "admindev",
+  "appid": "wxda163d60c135fc2d",
+  "shopId": "25",
+  "sysInfoId": 1
+}

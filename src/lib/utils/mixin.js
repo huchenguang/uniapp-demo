@@ -40,31 +40,38 @@ let page = {
         let pc = res.PageCount || 0;
         if (Object.prototype.toString.call(res) == '[object Array]') {
           //data是数组
-          console.log("xxx",res)
           list = res;
         } else if (
           Object.prototype.toString.call(res.DataSet) == '[object Array]'
         ) {
           //DataSet是数组
           list = res.DataSet;
+        }else{
+          list =null
         }
-
-        if (list.length > 0) {
-          //正常列表数据
-          this.pageIndex += 1;
-          this.emptyType = 0;
-          this.isNoMore = pi >= pc;
-        } else {
-          if (this.pageIndex <= 1) {
-            //第1页时显示空
-            this.emptyType = 1;
-            this.isNoMore = false;
-          } else {
-            //不是第1页显示没有更多
+        if(list){
+          if (list.length > 0) {
+            //正常列表数据
+            this.pageIndex += 1;
             this.emptyType = 0;
-            this.isNoMore = true;
+            this.isNoMore = pi >= pc;
+          } else {
+            if (this.pageIndex <= 1) {
+              //第1页时显示空
+              this.emptyType = 1;
+              this.isNoMore = false;
+            } else {
+              //不是第1页显示没有更多
+              this.emptyType = 0;
+              this.isNoMore = true;
+            }
           }
+        }else{
+          this.pageIndex =1;
+          this.emptyType = 2;
+          this.isNoMore = false;
         }
+        console.log("resaaa",res)
       }
       return list;
     },
@@ -89,6 +96,11 @@ let page = {
       this.isNoMore = false;
       this.isFrefresh = true;
       this.onLoadPage (this.loadOptions);
+    },
+    //停止下拉加载器
+    stopPullDownRefresh () {
+      this.isFrefresh = false;
+      uni.stopPullDownRefresh ();
     },
     onReachBottom () {
       this.onReachBottomPage()
